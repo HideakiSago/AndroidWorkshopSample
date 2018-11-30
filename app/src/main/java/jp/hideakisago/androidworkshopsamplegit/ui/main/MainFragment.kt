@@ -37,7 +37,7 @@ class MainFragment : Fragment() {
         val textView = view.findViewById<TextView>(R.id.textView)
         val button = view.findViewById<Button>(R.id.button)
         button.setOnClickListener {
-            textView.setText("Hello Android!!")
+            textView.text = "Hello Android!!"
         }
     }
 
