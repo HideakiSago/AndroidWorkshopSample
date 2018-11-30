@@ -17,5 +17,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="60dp"
+            tools:layout_editor_absoluteX="77dp" android:id="@+id/textView"/>
+    <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="129dp"
+            tools:layout_editor_absoluteX="46dp" android:id="@+id/button"/>
 
 </android.support.constraint.ConstraintLayout>
