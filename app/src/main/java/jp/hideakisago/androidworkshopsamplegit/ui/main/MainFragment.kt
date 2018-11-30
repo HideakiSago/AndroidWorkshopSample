@@ -11,7 +11,6 @@ import android.widget.TextView
 import jp.hideakisago.androidworkshopsamplegit.R
 
 class MainFragment : Fragment() {
-
     companion object {
         fun newInstance() = MainFragment()
     }
@@ -33,12 +32,10 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         val textView = view.findViewById<TextView>(R.id.textView)
         val button = view.findViewById<Button>(R.id.button)
         button.setOnClickListener {
             textView.text = "Hello Android!!"
         }
     }
-
 }
