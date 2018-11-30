@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
 import jp.hideakisago.androidworkshopsamplegit.R
 
 class MainFragment : Fragment() {
@@ -27,6 +29,16 @@ class MainFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
         // TODO: Use the ViewModel
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val textView = view.findViewById<TextView>(R.id.textView)
+        val button = view.findViewById<Button>(R.id.button)
+        button.setOnClickListener {
+            textView.text = "Hello Android!!"
+        }
     }
 
 }
