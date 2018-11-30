@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import jp.hideakisago.androidworkshopsamplegit.R
 
 class MainFragment : Fragment() {
@@ -31,6 +32,10 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val button = view.findViewById<Button>(R.id.button)
+        button.setOnClickListener {
+        }
     }
 
 }
