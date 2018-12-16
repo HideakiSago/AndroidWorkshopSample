@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import jp.hideakisago.androidworkshopsamplegit.R
 import jp.hideakisago.androidworkshopsamplegit.databinding.MainFragmentBinding
 
@@ -30,10 +29,6 @@ class MainFragment : Fragment() {
         MainFragmentBinding.bind(view).let {
             it.setLifecycleOwner(this)
             it.viewModel = viewModel
-        }
-        val button = view.findViewById<Button>(R.id.button)
-        button.setOnClickListener {
-            viewModel.text.value = "Hello Android!!"
         }
     }
 }
