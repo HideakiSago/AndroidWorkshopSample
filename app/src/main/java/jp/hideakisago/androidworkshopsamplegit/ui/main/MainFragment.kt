@@ -6,9 +6,8 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
 import jp.hideakisago.androidworkshopsamplegit.R
+import jp.hideakisago.androidworkshopsamplegit.databinding.MainFragmentBinding
 
 class MainFragment : Fragment() {
     companion object {
@@ -24,18 +23,12 @@ class MainFragment : Fragment() {
         return inflater.inflate(R.layout.main_fragment, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val textView = view.findViewById<TextView>(R.id.textView)
-        val button = view.findViewById<Button>(R.id.button)
-        button.setOnClickListener {
-            textView.text = "Hello Android!!"
+        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
+        MainFragmentBinding.bind(view).let {
+            it.setLifecycleOwner(this)
+            it.viewModel = viewModel
         }
     }
 }
